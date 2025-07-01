@@ -6,7 +6,7 @@ import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import ProfileDetails from './components/ProfileDetails';
-import ProfileSettings from './components/Profilesettings';
+import ProfileSettings from './components/ProfileSettings';
 
 
 const App = () => {
