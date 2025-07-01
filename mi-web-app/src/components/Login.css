@@ -1,0 +1,34 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: #d6e2f0;
+}
+
+.login-card {
+    background-color: white;
+    padding: 20px;
+    width: 290px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.qr-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f3251;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #7b879d;
+}
