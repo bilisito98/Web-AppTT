@@ -55,3 +55,103 @@
   background-color: purple;
   color: white;
 }
+
+
+
+
+
+.profile-details-container {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.counter-text {
+  font-size: 1.5rem;
+}
+
+.buttons-container button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.buttons-container button:last-child {
+  margin-right: 0;
+}
+
+.time-container {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+.music-card {
+  margin-top: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #fafafa;
+}
+
+.album-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.song-info {
+  flex: 1;
+  text-align: left;
+}
+
+.song-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.song-artist {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+.song-full-title {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #333;
+}
+
+.song-year {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 4px;
+}
+
+.genre-button {
+  margin-top: 10px;
+  padding: 5px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 0;
+}
