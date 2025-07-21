@@ -1,61 +1,60 @@
-import React from 'react';
-import './ModelosER.css';
+import React, { useState } from 'react';
+import "./ModelosER.css";
 
-// Lista de diagramas ER disponibles
+// Cambia los nombres y paths según corresponda a cómo importas imágenes en React
 const diagramas = [
   {
-    nombre: 'Problema Zoológicos',
-    archivo: 'Problema_1_Zoológicos.png'
+    nombre: "Problema 1_ Zoológicos",
+    archivo: require("C:\Users\asdda\OneDrive\Desktop\CURSOS\KODLAND\python proy\Web-AppTT\src\components\Problema_1_ Zoológicos.png"),
   },
   {
-    nombre: 'Diagrama ER, Gabinete de Abogados',
-    archivo: 'Diagrama_ER_Gabinete_De_Abogados.png'
+    nombre: "Diagrama ER, Gabinete De Abogados",
+    archivo: require("C:\Users\asdda\OneDrive\Desktop\CURSOS\KODLAND\python proy\Web-AppTT\src\components\Diagrama_ER_Gabinete_De_Abogados.png"),
   },
   {
-    nombre: 'Diagrama ER de Sistemas de Ventas',
-    archivo: 'Diagrama_ER_de_Sistema_de_Ventas.png'
+    nombre: "Diagrama ER de Sistema de Ventas",
+    archivo: require("C:\Users\asdda\OneDrive\Desktop\CURSOS\KODLAND\python proy\Web-AppTT\src\components\Diagrama_ER_de_Sistema_de_Ventas.png"),
   },
   {
-    nombre: 'Diagrama ER de bases de datos (enunciado UVI)',
-    archivo: 'Diagrama_ER_de_base_de_datos_enunciado_UVI.png'
-  }
+    nombre: "Diagrama ER de base de datos (enunciado UVI)",
+    archivo: require("C:\Users\asdda\OneDrive\Desktop\CURSOS\KODLAND\python proy\Web-AppTT\src\components\UVI.png"),
+  },
 ];
 
 export default function ProfileSettings() {
-  const [seleccionado, setSeleccionado] = React.useState(0);
+  const [seleccionado, setSeleccionado] = useState(0);
 
   return (
-    <div className="modelosER-container">
-      {/* Ruta feliz */}
+    <div className="modeloser-container">
+      {/* Ruta feliz / Breadcrumb */}
       <nav className="breadcrumb">
-        <span className="breadcrumb-root">Inicio</span>
-        <span className="breadcrumb-separator">/</span>
-        <span className="breadcrumb-actual">Modelos ER</span>
+        <span>Inicio</span>
+        <span className="breadcrumb-separador">/</span>
+        <span>Modelos ER</span>
       </nav>
-      
-      <h2>Visualización de Diagramas E-R</h2>
+      <h2 className="modeloser-titulo">Visualización de Diagramas E-R</h2>
 
-      {/* Menú de selección visual, tipo tabs o botones */}
-      <div className="er-tabs">
-        {diagramas.map((d, i) => (
+      {/* Secciones para seleccionar diagrama */}
+      <div className="modeloser-tabs">
+        {diagramas.map((d, idx) => (
           <button
             key={d.nombre}
-            className={`er-tab${seleccionado === i ? ' seleccionado' : ''}`}
-            onClick={() => setSeleccionado(i)}
+            className={`modeloser-tab${seleccionado === idx ? " seleccionado" : ""}`}
+            onClick={() => setSeleccionado(idx)}
           >
             {d.nombre}
           </button>
         ))}
       </div>
 
-      {/* Área visual del diagrama */}
-      <div className="er-display">
+      {/* Visualización del diagrama */}
+      <div className="modeloser-display">
         <img
-          className="er-image"
-          src={`./${diagramas[seleccionado].archivo}`}
+          className="modeloser-img"
+          src={diagramas[seleccionado].archivo}
           alt={diagramas[seleccionado].nombre}
         />
-        <div className="er-caption">{diagramas[seleccionado].nombre}</div>
+        <div className="modeloser-caption">{diagramas[seleccionado].nombre}</div>
       </div>
     </div>
   );
