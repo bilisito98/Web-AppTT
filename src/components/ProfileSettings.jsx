@@ -1,24 +1,17 @@
 import React, { useState } from 'react';
-import "./ModelosER.css";
+import './ModelosER.css';
 
-// Cambia los nombres y paths según corresponda a cómo importas imágenes en React
+// Importaciones con los nombres exactos de tu carpeta
+import zoologicos from './Problema_1_Zoológicos.png';
+import abogados from './Diagrama_ER_Gabinete_De_Abogados.png';
+import ventas from './Diagrama_ER_de_Sistema_de_Ventas.png';
+import uvi from './UVI.png';
+
 const diagramas = [
-  {
-    nombre: "Problema 1_ Zoológicos",
-    archivo: require("C:\Users\asdda\OneDrive\Desktop\CURSOS\KODLAND\python proy\Web-AppTT\src\components\Problema_1_ Zoológicos.png"),
-  },
-  {
-    nombre: "Diagrama ER, Gabinete De Abogados",
-    archivo: require("C:\Users\asdda\OneDrive\Desktop\CURSOS\KODLAND\python proy\Web-AppTT\src\components\Diagrama_ER_Gabinete_De_Abogados.png"),
-  },
-  {
-    nombre: "Diagrama ER de Sistema de Ventas",
-    archivo: require("C:\Users\asdda\OneDrive\Desktop\CURSOS\KODLAND\python proy\Web-AppTT\src\components\Diagrama_ER_de_Sistema_de_Ventas.png"),
-  },
-  {
-    nombre: "Diagrama ER de base de datos (enunciado UVI)",
-    archivo: require("C:\Users\asdda\OneDrive\Desktop\CURSOS\KODLAND\python proy\Web-AppTT\src\components\UVI.png"),
-  },
+  { nombre: "Problema Zoológicos", archivo: zoologicos },
+  { nombre: "Diagrama ER, Gabinete de Abogados", archivo: abogados },
+  { nombre: "Diagrama ER de Sistemas de Ventas", archivo: ventas },
+  { nombre: "Diagrama ER de bases de datos (enunciado UVI)", archivo: uvi },
 ];
 
 export default function ProfileSettings() {
@@ -26,15 +19,14 @@ export default function ProfileSettings() {
 
   return (
     <div className="modeloser-container">
-      {/* Ruta feliz / Breadcrumb */}
+      {/* Ruta de navegación */}
       <nav className="breadcrumb">
         <span>Inicio</span>
-        <span className="breadcrumb-separador">/</span>
+        <span className="breadcrumb-separador">{'>'}</span>
         <span>Modelos ER</span>
       </nav>
-      <h2 className="modeloser-titulo">Visualización de Diagramas E-R</h2>
-
-      {/* Secciones para seleccionar diagrama */}
+      <h2 className="modeloser-titulo">Visualización de Diagramas E‑R</h2>
+      {/* Tabs de selección */}
       <div className="modeloser-tabs">
         {diagramas.map((d, idx) => (
           <button
@@ -46,7 +38,6 @@ export default function ProfileSettings() {
           </button>
         ))}
       </div>
-
       {/* Visualización del diagrama */}
       <div className="modeloser-display">
         <img
