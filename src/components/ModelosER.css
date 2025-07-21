@@ -1,0 +1,69 @@
+.modelosER-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f5f9ff;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px #0001;
+}
+
+.breadcrumb {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  color: #012677;
+}
+
+.breadcrumb-root,
+.breadcrumb-separator,
+.breadcrumb-actual {
+  font-weight: 500;
+}
+
+.breadcrumb-actual {
+  color: #0078d4;
+}
+
+.er-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.er-tab {
+  background: #f0f4fd;
+  border: 2px solid #2074e2;
+  border-radius: 8px;
+  color: #2074e2;
+  cursor: pointer;
+  padding: 0.5rem 1.3rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+.er-tab.seleccionado,
+.er-tab:focus {
+  background: #2074e2;
+  color: #fff;
+  box-shadow: 0 0 0 3px #249cf9aa;
+}
+
+.er-display {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.er-image {
+  border: 5px solid #2074e2;
+  border-radius: 18px;
+  background: #fff;
+  max-width: 100%;
+  min-height: 350px;
+  object-fit: contain;
+  box-shadow: 0 4px 20px #3331;
+}
+
+.er-caption {
+  margin-top: 1.1rem;
+  font-size: 1rem;
+  color: #052353;
+  font-weight: 600;
+}
