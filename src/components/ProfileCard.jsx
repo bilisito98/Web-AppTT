@@ -5,7 +5,7 @@ const ProfileCard = () => {
   return (
     <div className="profile-card">
       <img
-        src="src\components\vitalik-buterin-creador-ethereum.jpg" 
+        src="https://images.cointelegraph.com/cdn-cgi/image/format=auto,onerror=redirect,quality=90,width=1434/https://s3.cointelegraph.com/uploads/2021-10/66d58839-fb8d-4fee-9d8d-ba91de8a469f.jpg" 
         alt="Perfil"
         className="profile-image"
       />
